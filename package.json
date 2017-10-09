@@ -1,0 +1,27 @@
+{
+  "name": "safai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NishantGadihoke/safai.git"
+  },
+  "author": "MINET",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NishantGadihoke/safai/issues"
+  },
+  "homepage": "https://github.com/NishantGadihoke/safai#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.0",
+    "express": "^4.16.1",
+    "mongoose": "^4.12.1",
+    "nodemon": "^1.12.1",
+    "pug": "^2.0.0-rc.4"
+  }
+}
