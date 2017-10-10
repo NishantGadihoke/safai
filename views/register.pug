@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title Register to Safai
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          form.mono(action='/register', method='post')
+              label(for='Name') Name:
+              input#name(type='text', name='name', placeholder='Name', required)
+              label(for='email') Email:
+              input#email(type='email', name='email', placeholder='Email Address', required)
+              label(for='password') Password:
+              input#password(type='password', name='password', placeholder='Password', required)
+              input(type='submit', value='Register')

@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title Safai Admin Panel
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          form(method='post', action='/admin/questions')
+            label Select level:
+            select.select-teams(name='level', id='selectedQuestion' onChange='updateValues(this.value)')
+              option Select level
+              each user in user
+                option= user.level
+            label.single Question: 
+            textarea(placeholder='Level' name='question')#currentLevel
+            label.single Image: 
+            input(placeholder='Image' name='Image')#currentImage
+            input(type='submit', value='Change level')
+  script(type='text/javascript').
+    var questions = !{JSON.stringify(image)};
+    function updateValues(selectedImage) {
+      var array = questions.filter(function(image) {
+        return image.level == selectedImage;
+      });
+      console.log(array[0].answer);
+      document.getElementById('currentQuestion').innerHTML = array[0].question;
+      document.getElementById('currentImage').value = array[0].image;
+    }

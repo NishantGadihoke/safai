@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "MINET font";
+    src: url("../fonts/minet.eot");
+    src: url("../fonts/minet.eot?#iefix") format("embedded-opentype"),url("../fonts/minet.woff2") format("woff2"),url("../fonts/minet.woff") format("woff"),url("../fonts/minet.ttf") format("truetype"),url("../fonts/minet.svg#virgo_01regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Import modules
+
+@import "modules/framework";
+@import "modules/colors";
+@import "modules/base";
+@import "modules/utility";
+
+.center {
+  text-align: center;
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #AAA;
+  h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 100;
+  }
+}
+
+section#main {
+  .card {
+    p.error {
+      margin-top: 0;
+      text-align: center;
+    }
+    h1.form-title {
+      font-size: 2em;
+      margin-top: 0;
+    }
+    background: #FFF;
+    box-shadow: 1px 2px 1px 0 rgba(0,0,0,0.02);
+    margin: 0 auto;
+    width: 580px;
+    max-width: 100%;
+    label {
+      display: block;
+    }
+    &.form {
+      width: 500px;
+    }
+    &.question-card {
+      padding: 2.5%;
+      margin-top: 10vh;
+      p {
+        margin-top: 0;
+        font-size: 1.2em;
+        span {
+          display: block;
+        }
+        span.userLevel {
+          font-weight: bold;
+        }
+        span.question {
+          white-space: pre-line;
+          max-width: 100%;
+          font-weight: 100;
+        }
+      }
+      form {
+        input#answer, textarea {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.leaderboard {
+      width: 100%;
+      max-width: 100%;
+      padding: 3%;
+      text-align: center;
+      &.smaller {
+        width: 80%;
+      }
+      table {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1em;
+        th, td {
+          padding: 2%;
+        }
+        tr:nth-child(odd) {
+          background: $grey;
+          &.header {
+            background: $blue;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+button.cta {
+  width: 100%;
+  padding: 7.5px 0;
+  margin: 5px 0;
+  font-family: 'inconsolata' ,'droid-sans-mono', monospace;
+  color: #FFF;
+  background: $blue;
+  text-align: center;
+  border: 1.5px solid $blue;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  outline: none;
+  &:hover {
+    background: $dark-blue;
+    border-color: $dark-blue;
+  }
+}
+
+/* LOGS RELOAD ANIMATION */
+
+.animated {
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.yt-loader {
+    -webkit-animation-name: horizontalProgressBar;
+    animation-name: horizontalProgressBar;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    background: #216be6;
+    height: 3px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 0%;
+    z-index: 9999;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+@keyframes horizontalProgressBar
+{
+    0%   {width: 0%;}
+    100% {width:100%;}
+}
+
+@-webkit-keyframes horizontalProgressBar /* Safari and Chrome */
+{
+    0%   {width: 0%;}
+    100% {width:100%;}
+}
+
+
+//Import mobile styling
+@import "modules/responsive";

@@ -1,0 +1,178 @@
+/***************
+ * Responsive Styling *
+ ***************/
+
+@media (max-width: 1000px) {
+
+  header {
+    nav {
+      display: none;
+      padding-bottom: 30px;
+      &.mobile {
+        display: block;
+        width: 100%;
+        .wrapper {
+          text-align: center;
+        }
+        #mobile-menu {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    .columns.six {
+      display: block;
+      width: 100%;
+      &.right {
+        display: none;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  #bottom {
+    display: none;
+    &.show-bottom {
+      display: block;
+      .six.columns {
+        display: inline-block;
+        width: 50%;
+      }
+    }
+  }
+
+  a.button {
+    display: block;
+    &.cta, &.ghost {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  #masthead {
+    padding-top: 20px;
+    img.logo {
+      height: 140px;
+    }
+    h1.hero-text {
+      font-size: 3em;
+      margin-top: 25px;
+      .br {
+        display: block;
+      }
+    }
+    h2.subhead {
+      margin-bottom: 45px;
+    }
+  }
+
+  #x {
+    img {
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+  }
+
+  #travel {
+    padding-bottom: 0;
+    .container {
+      .columns {
+        display: block;
+        width: 100%;
+      }
+      .card {
+        background: #FAFAFA;
+        padding: 0;
+        height: auto;
+      }
+      iframe {
+        width: 100%;
+        margin: 0 0 8vh 0;
+        padding: 0;
+        height: 400px;
+      }
+    }
+  }
+
+  #faqs {
+    .questions {
+      dl {
+        dt, dd {
+          padding: 5%;
+          font-weight: 100;
+        }
+        dt {
+          padding-right: 12.5%;
+        }
+      }
+    }
+  }
+
+  img.messenger-code {
+    margin-top: 20px;
+    max-width: 130px;
+  }
+
+  .row {
+    .six.columns:nth-child(2) {
+      h2.title {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  #schedule {
+    .main {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+
+  .event {
+    .placeholder {
+      display: none;
+    }
+    p.participant-count {
+      margin-top: 15px;
+    }
+  }
+
+  .card.form {
+    padding: 5%;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+  #x, #make {
+    img {
+      padding-top: 100px;
+      max-width: 130px;
+    }
+  }
+  ul#mobile-menu {
+    padding-top: 0;
+  }
+  .card.logs {
+    display: none;
+  }
+
+}
+
+@media (max-width: 500px) {
+  #x, #make {
+    img {
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+  }
+}

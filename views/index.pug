@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title Upload an image
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          form.mono(action='/', method='post', ref='imageUpload', id='imageUpload', encType='multipart/form-data')
+              label(for='file') Upload Image:
+              input#file(type='file', name='file', placeholder='Upload an image', required)
+              input(type='submit', value='Submit')
